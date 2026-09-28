@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment</title>
+</head>
+<body>
+
+    <form action="/process-payment" method="POST">
+        <h2>Secure Payment</h2>
+        
+        <p>
+            <label for="card">Card Number:</label><br>
+            <input type="text" id="card" name="card_number" placeholder="1234 5678 9101 1121" required pattern="\d{16}">
+        </p>
+        
+        <p>
+            <label for="expiry">Expiry Date:</label><br>
+            <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required pattern="\d{2}/\d{2}">
+        </p>
+        
+        <p>
+            <label for="cvv">CVV:</label><br>
+            <input type="password" id="cvv" name="cvv" placeholder="123" required pattern="\d{3,4}">
+        </p>
+        
+        <button type="submit">Pay Now</button>
+    </form>
+
+</body>
+</html>
+
